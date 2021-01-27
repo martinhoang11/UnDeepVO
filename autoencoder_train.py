@@ -68,7 +68,6 @@ def main(args):
                                                       monitor='loss',
                                                       verbose=1,
                                                       save_best_only=True)])
-
-
+                                                      
 if __name__ == '__main__':
     main(args)

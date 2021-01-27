@@ -12,7 +12,7 @@ def spatial_transformation(inputs, sign, name):
 
 
 def expand_dims(inputs, dimension, name):
-    def output_shape(input_shape):
+    def output_shape(input_shape)
         shape = list(input_shape)
 
         shape[3] = 1

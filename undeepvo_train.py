@@ -70,22 +70,22 @@ def main(args):
 
     udvo = UnDeepVOModel(left_input_next, left_input, right_input, args.learning_rate)
 
-    # for epoch in range(epochs):
-    #     # TODO: need to save model after each epoch
-    #     # model_path = os.path.join(models_dir, model_name + '_epoch_%d' % epoch)
-    #
-    #     udvo.model.fit_generator(train_gen,
-    #                              steps_per_epoch=train_samples // batch_size,
-    #                              epochs=epochs,
-    #                              validation_data=test_gen,
-    #                              validation_steps=test_samples // batch_size,
-    #                              verbose=1,
-    #                              # callbacks=[TensorBoard(log_dir=args.log_directory,
-    #                              #                        histogram_freq=True,
-    #                              #                        batch_size=batch_size,
-    #                              #                        write_graph=False,
-    #                              #                        write_grads=True)]
-    #                              )
+    for epoch in range(epochs):
+        # TODO: need to save model after each epoch
+        # model_path = os.path.join(models_dir, model_name + '_epoch_%d' % epoch)
+    
+        udvo.model.fit_generator(train_gen,
+                                 steps_per_epoch=train_samples // batch_size,
+                                 epochs=epochs,
+                                 validation_data=test_gen,
+                                 validation_steps=test_samples // batch_size,
+                                 verbose=1,
+                                #  callbacks=[TensorBoard(log_dir=args.log_directory,
+                                #                         histogram_freq=True,
+                                #                         batch_size=batch_size,
+                                #                         write_graph=False,
+                                #                         write_grads=True)]
+                                 )
 
     udvo.model.summary()
 
