@@ -5,7 +5,7 @@ from layers import depth_to_disparity, disparity_difference, expand_dims, spatia
 from losses import photometric_consistency_loss
 
 
- class UnDeepVOModel(object):
+class UnDeepVOModel(object):
     def __init__(self, left_input_k_1, left_input_k, right_input_k, mode='train', lr=0.1, alpha_image_loss=0.85,
                  img_rows=128, img_cols=512):
         # NOTE: disparity calculation

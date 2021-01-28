@@ -1,7 +1,7 @@
 # uncomment this section to train on the CPU
-# import os
-# os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"  # see issue #152
-# os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
+import os
+os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"  # see issue #152
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 from keras.utils import plot_model
 from keras.layers import Input
 from image_loader import get_stereo_image_generators
